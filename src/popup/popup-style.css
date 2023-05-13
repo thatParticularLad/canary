@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    /* display: flex;
+    flex; */
+    width:250px;
+    background-color: azure;
+    font-family:'Rubik';
+    
+}
+h1{
+    font-size:20px;
+    padding:10px 5%;
+    margin:0 auto 10px;
+    color: white;
+    font-weight:500;
+    background-color: #009de0;
+    
+}
+h2{
+    font-size:16px;
+    font-weight:400;
+    color:#444;
+    padding:10px 15px;
+    margin-bottom:10px;
+}
+.restaurant-row{
+    font-family:'Rubik';
+    font-size:12px;
+    color: #222;
+    width:90%;
+    padding:5%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.remove-icon{
+    width: 20px;
+    height:auto;
+    align-self: flex-end;
+}
+.remove-icon:hover{
+   opacity:0.8;
+   cursor:pointer;
+}

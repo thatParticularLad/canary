@@ -1,0 +1,15 @@
+.fake::before {
+  content: url("/assets/cancel-red.png");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.real::before {
+  content: url("/assets/check-green.png");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
