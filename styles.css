@@ -13,3 +13,9 @@
   height: 15px;
   margin-right: 5px;
 }
+
+#response-dialog {
+  border: 1px solid #ccc;
+  z-index: 2;
+  border-radius: 10px;
+}
