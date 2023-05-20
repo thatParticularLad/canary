@@ -8,19 +8,29 @@
     "48": "assets/icon.png",
     "128": "assets/icon.png"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content-script.js", "popup/popup.js"],
-      "css": ["styles.css"]
-    }
-  ],
-  "background": {
-    "service_worker": "service-worker.js"
-  },
+  "permissions": ["activeTab", "storage", "contextMenus"],
   "action": {
     "default_icon": "assets/icon.png",
     "default_popup": "popup/popup.html"
   },
-  "permissions": ["activeTab", "storage", "contextMenus"]
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js", "popup/popup.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "contextMenu.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/cool.png",
+        "assets/shocked.png",
+        "assets/thinking.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

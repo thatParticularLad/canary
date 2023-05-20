@@ -18,4 +18,16 @@
   border: 1px solid #ccc;
   z-index: 2;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.dialog-close-btn {
+  background-image: url("/assets/close.png");
+  width: 15px;
+  height: 15px;
+}
+.verdict-image {
+  width: 30px;
+  height: 30px;
 }

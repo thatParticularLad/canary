@@ -32,7 +32,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tabs) => {
   const classification = await getClassificationResult(info);
   // what contentScript listens for
   const predictionNumber = parseApiResponse(classification.prediction);
-  // console.log("CLASSIFICACTION", predictionNumber);
+  console.log("CLASSIFICACTION", predictionNumber);
 
   // Send message
   chrome.tabs.sendMessage(tabs.id, predictionNumber);
