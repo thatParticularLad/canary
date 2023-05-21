@@ -1,17 +1,6 @@
-.fake::before {
-  content: url("/assets/cancel-red.png");
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-}
-
-.real::before {
-  content: url("/assets/check-green.png");
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
+@font-face {
+  font-family: "Rubik", sans-serif;
+  src: url("./assets/fonts/Rubik-VariableFont_wght.ttf");
 }
 
 #response-dialog {
@@ -20,14 +9,32 @@
   border-radius: 10px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#response-dialog > * {
+  font-size: 16px;
+  font-family: "Rubik";
+}
+#response-dialog > img {
+  width: 30px;
+  height: 30px;
+}
+
+#response-dialog > span {
+  font-weight: 500;
+}
+
+#response-dialog > p {
+  /* Reset any previously applied styles */
+  margin: 0;
+  padding: 0;
+  padding-left: 8px;
 }
 
 .dialog-close-btn {
   background-image: url("/assets/close.png");
   width: 15px;
   height: 15px;
-}
-.verdict-image {
-  width: 30px;
-  height: 30px;
 }
