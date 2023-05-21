@@ -28,24 +28,12 @@ function handleMouseup(event) {
   }
 }
 
-function getImageName(label) {
-  switch (label) {
-    case "FAKE":
-      return "shocked.png";
-    case "REAL":
-      return "cool.png";
-    case "UNDECIDED":
-      return "thinking.png";
-    default:
-      return "thinking.png";
-  }
-}
+const getImageName = (label) => (label === "FAKE" ? "warn.png" : "checked.png");
+
 const rescale = (val, oMin, oMax, min, max) =>
   ((val - oMin) * (max - min)) / (oMax - oMin) + min;
 
 function getDialogHTML(result) {
-  const MIN_CONFIDENCE = 75;
-
   const resultObj = { label: "", confidence: 0 };
   // Now a constant, but should be fetched form the user's settings
   // confidence percent to assign a class to text
@@ -53,20 +41,12 @@ function getDialogHTML(result) {
     const rescaled = rescale(result, 0.5, 0, 0, 1) * 100;
     new_value = rescaled.toFixed(2);
     resultObj.confidence = new_value;
-    if (new_value >= MIN_CONFIDENCE) {
-      resultObj.label = "REAL";
-    } else {
-      resultObj.label = "UNDECIDED";
-    }
+    resultObj.label = "REAL";
   } else {
     const rescaled = rescale(result, 0.51, 1, 0, 1) * 100;
     new_value = rescaled.toFixed(2);
     resultObj.confidence = new_value;
-    if (new_value >= MIN_CONFIDENCE) {
-      resultObj.label = "FAKE";
-    } else {
-      resultObj.label = "UNDECIDED";
-    }
+    resultObj.label = "FAKE";
   }
 
   const assetPath = getImageName(resultObj.label);
