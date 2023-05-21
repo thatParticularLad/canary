@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Rubik", sans-serif;
-  src: url("./assets/fonts/Rubik-VariableFont_wght.ttf");
+  font-family: "Open Sans", sans-serif;
+  src: url("./assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 #response-dialog {
@@ -15,15 +15,15 @@
 
 #response-dialog > * {
   font-size: 16px;
-  font-family: "Rubik";
+  font-family: "Open Sans";
 }
 #response-dialog > img {
   width: 30px;
   height: 30px;
 }
 
-#response-dialog > span {
-  font-weight: 500;
+#response-dialog > p > span {
+  font-weight: bold;
 }
 
 #response-dialog > p {

@@ -25,11 +25,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": [
-        "assets/cool.png",
-        "assets/shocked.png",
-        "assets/thinking.png"
-      ],
+      "resources": ["assets/warn.png", "assets/checked.png"],
       "matches": ["<all_urls>"]
     }
   ]
