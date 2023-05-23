@@ -43,7 +43,7 @@ function getDialogHTML(result) {
     resultObj.confidence = new_value;
     resultObj.label = "REAL";
   } else {
-    const rescaled = rescale(result, 0.51, 1, 0, 1) * 100;
+    const rescaled = rescale(result, 0.5, 1, 0, 1) * 100;
     new_value = rescaled.toFixed(2);
     resultObj.confidence = new_value;
     resultObj.label = "FAKE";
