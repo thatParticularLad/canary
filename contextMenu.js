@@ -21,7 +21,7 @@ const parseApiResponse = (data) => {
 };
 
 async function getClassificationResult(info) {
-  const URL = "http://127.0.0.1:5000/lstm-text";
+  const URL = "https://flask-model-api.herokuapp.com/lstm-text";
   const { selectionText } = info;
   const data = await postData(URL, selectionText);
 
